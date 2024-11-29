@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Award } from 'lucide-react';
 import { ProgramGrid } from '../components/programs/ProgramGrid';
 import { SearchBar } from '../components/search/SearchBar';
@@ -7,6 +7,10 @@ import { InterestSelector } from '../components/home/InterestSelector';
 export function ScholarshipsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+
+  useEffect(() => {
+    document.title = 'Scholarships | Prilo';
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">

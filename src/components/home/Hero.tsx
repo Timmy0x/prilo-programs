@@ -32,7 +32,7 @@ export function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-prilo-blue to-purple-600">
           Discover Your Perfect
           <br />
-          Academic Opportunity
+          Academic Journey
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Find competitions, summer programs, and scholarships tailored to your interests

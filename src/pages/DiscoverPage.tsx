@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Hero } from '../components/home/Hero';
 import { InterestSelector } from '../components/home/InterestSelector';
 import { ProgramGrid } from '../components/programs/ProgramGrid';
 import { SearchBar } from '../components/search/SearchBar';
+import { useEffect } from 'react';
 
 export function DiscoverPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [showSearch, setShowSearch] = useState(!!searchQuery);
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+
+  useEffect(() => {
+    document.title = 'Discover Academic Opportunities | Prilo';
+  }, []);
 
   useEffect(() => {
     const query = searchParams.get('q');
